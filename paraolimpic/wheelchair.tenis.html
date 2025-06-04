@@ -1,1 +1,319 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Нормативи та правила візкового тенісу для паралімпійських спортсменів">
+    <title>Візковий теніс</title>
+    <style>
+        :root {
+            --primary: #4682B4;
+            --secondary: #5F9EA0;
+            --accent: #FFA500;
+            --light: #F0F8FF;
+            --dark: #2F4F4F;
+            --success: #32CD32;
+            --danger: #FF4500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #E6F3FF, #D1E7FF);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ol, ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(70, 130, 180, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 165, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            margin: 20px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Візковий теніс</h1>
+        <nav>
+            <a href="../paraolimpic.html">← До паралімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Нормативи та правила</h2>
+            
+            <div class="highlight">
+                <p><strong>Основна особливість:</strong> М'яч може відскочити два рази, причому другий відскок може бути за межами корту. Гравці використовують спеціальні спортивні візки, які дозволяють швидко маневрувати.</p>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Гра у візковий теніс">
+            
+            <h3>Тестові вправи та нормативи</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Вправа</th>
+                        <th>Професійний рівень</th>
+                        <th>Аматорський рівень</th>
+                        <th>Початковий рівень</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Точність подачі (у ціль)</td>
+                        <td class="pro-level">9/10</td>
+                        <td class="amateur-level">7/10</td>
+                        <td class="beginner-level">5/10</td>
+                    </tr>
+                    <tr>
+                        <td>Пересування на візку (5м)</td>
+                        <td class="pro-level">≤ 3.0 сек</td>
+                        <td class="amateur-level">≤ 4.0 сек</td>
+                        <td class="beginner-level">≤ 5.0 сек</td>
+                    </tr>
+                    <tr>
+                        <td>Реакція на удар</td>
+                        <td class="pro-level">≤ 0.35 сек</td>
+                        <td class="amateur-level">≤ 0.45 сек</td>
+                        <td class="beginner-level">≤ 0.6 сек</td>
+                    </tr>
+                    <tr>
+                        <td>Сила удару (км/год)</td>
+                        <td class="pro-level">≥ 120</td>
+                        <td class="amateur-level">≥ 100</td>
+                        <td class="beginner-level">≥ 80</td>
+                    </tr>
+                    <tr>
+                        <td>Витривалість (хвилин безперервної гри)</td>
+                        <td class="pro-level">≥ 60</td>
+                        <td class="amateur-level">≥ 40</td>
+                        <td class="beginner-level">≥ 20</td>
+                    </tr>
+                    <tr>
+                        <td>Точність удару по лінії</td>
+                        <td class="pro-level">8/10</td>
+                        <td class="amateur-level">6/10</td>
+                        <td class="beginner-level">4/10</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Основні правила</h3>
+            <ol>
+                <li>М'яч може торкнутися корту двічі перед ударом</li>
+                <li>Візок повинен залишатися стабільним під час удару</li>
+                <li>Гравець повинен мати принаймні одну частину тіла в контакті з візком</li>
+                <li>Стандартний розмір корту та висота сітки такі самі, як у звичайного тенісу</li>
+                <li>М'ячі використовуються стандартні тенісні</li>
+            </ol>
+            
+            <h3>Класифікація гравців</h3>
+            <ul>
+                <li><strong>Клас 1:</strong> Гравці з обмеженнями в рухах верхніх і нижніх кінцівок</li>
+                <li><strong>Клас 2:</strong> Гравці з хорошою функцією рук, але обмеженнями в тулубі</li>
+                <li><strong>Клас 3:</strong> Гравці з мінімальними обмеженнями, які можуть обертати тулуб</li>
+                <li><strong>Клас 4:</strong> Гравці з обмеженнями в одній нижній кінцівці</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Паралімпійські нормативи | Довідник для тренерів та спортсменів</p>
+    </footer>
+      <script src="../script.js"></script>
+      
+</body>
+</html>
