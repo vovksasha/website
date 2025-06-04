@@ -1,1 +1,309 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Біатлон</title>
+    <style>
+        :root {
+            --primary: #2b5876;
+            --secondary: #4e4376;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #27ae60;
+            --danger: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(43, 88, 118, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(243, 156, 18, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: var(--primary);
+        }
+        
+        .pro-level {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .amateur-level {
+            color: var(--accent);
+        }
+        
+        .beginner-level {
+            color: var(--danger);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Біатлон</h1>
+        <nav>
+            <a href="../olimpic.html">← Назад до олімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Нормативи з біатлону</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дисципліна</th>
+                    <th>Професійний рівень</th>
+                    <th>Аматорський рівень</th>
+                    <th>Юніорський рівень (U-21)</th>
+                    <th>Юнацький рівень (U-18)</th>
+                    <th>Початковий рівень</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Спринт 10 км (чоловіки)</td>
+                    <td class="pro-level">24-26 хв</td>
+                    <td class="amateur-level">28-30 хв</td>
+                    <td>26-28 хв</td>
+                    <td>29-31 хв</td>
+                    <td class="beginner-level">32-35 хв</td>
+                </tr>
+                <tr>
+                    <td>Спринт 7.5 км (жінки)</td>
+                    <td class="pro-level">20-22 хв</td>
+                    <td class="amateur-level">24-26 хв</td>
+                    <td>22-24 хв</td>
+                    <td>25-27 хв</td>
+                    <td class="beginner-level">28-30 хв</td>
+                </tr>
+                <tr>
+                    <td>Індивідуальна 20 км (чоловіки)</td>
+                    <td class="pro-level">50-55 хв</td>
+                    <td class="amateur-level">60-65 хв</td>
+                    <td>55-60 хв</td>
+                    <td>65-70 хв</td>
+                    <td class="beginner-level">75+ хв</td>
+                </tr>
+                <tr>
+                    <td>Індивідуальна 15 км (жінки)</td>
+                    <td class="pro-level">45-50 хв</td>
+                    <td class="amateur-level">55-60 хв</td>
+                    <td>50-55 хв</td>
+                    <td>60-65 хв</td>
+                    <td class="beginner-level">70+ хв</td>
+                </tr>
+                <tr>
+                    <td>Мас-старт 15 км (чоловіки)</td>
+                    <td class="pro-level">35-40 хв</td>
+                    <td class="amateur-level">45-50 хв</td>
+                    <td>40-45 хв</td>
+                    <td>50-55 хв</td>
+                    <td class="beginner-level">-</td>
+                </tr>
+                <tr>
+                    <td>Мас-старт 12.5 км (жінки)</td>
+                    <td class="pro-level">30-35 хв</td>
+                    <td class="amateur-level">40-45 хв</td>
+                    <td>35-40 хв</td>
+                    <td>45-50 хв</td>
+                    <td class="beginner-level">-</td>
+                </tr>
+                <tr>
+                    <td>Точність стрільби (лежачи)</td>
+                    <td class="pro-level">90-95%</td>
+                    <td class="amateur-level">80-85%</td>
+                    <td>85-90%</td>
+                    <td>75-80%</td>
+                    <td class="beginner-level">60-70%</td>
+                </tr>
+                <tr>
+                    <td>Точність стрільби (стоячи)</td>
+                    <td class="pro-level">85-90%</td>
+                    <td class="amateur-level">75-80%</td>
+                    <td>80-85%</td>
+                    <td>70-75%</td>
+                    <td class="beginner-level">50-60%</td>
+                </tr>
+                <tr>
+                    <td>Час на стрільбищі (за стрільбу)</td>
+                    <td class="pro-level">20-25 сек</td>
+                    <td class="amateur-level">30-35 сек</td>
+                    <td>25-30 сек</td>
+                    <td>35-40 сек</td>
+                    <td class="beginner-level">45+ сек</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Біатлонні нормативи | Довідник для тренерів та спортсменів</p>
+    </footer>
+ <script src="../script.js"></script>
+ 
+</body>
+</html>
