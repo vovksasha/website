@@ -1,1 +1,476 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Нормативи з парапауерліфтингу (жим лежачи) для різних вагових категорій">
+    <title>Парапауерліфтинг</title>
+    <style>
+        :root {
+            --primary: #8B0000;
+            --secondary: #B22222;
+            --accent: #FFD700;
+            --light: #FFF8DC;
+            --dark: #2F4F4F;
+            --success: #006400;
+            --silver: #C0C0C0;
+            --bronze: #CD7F32;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #FFEFBA, #FFFFFF);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 30px 0 20px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(139, 0, 0, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        
+        .msc {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .kms {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .i {
+            color: var(--silver);
+            font-weight: 600;
+        }
+        
+        .ii {
+            color: var(--bronze);
+            font-weight: 600;
+        }
+        
+        .iii {
+            color: #8B4513;
+            font-weight: 600;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2, h3 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Парапауерліфтинг</h1>
+        <nav>
+            <a href="../paraolimpic.html">← До паралімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Нормативи з жиму лежачи</h2>
+            
+            <div class="highlight">
+                <p><strong>Особливості парапауерліфтингу:</strong> Змагання з жиму лежачи серед спортсменів з обмеженими можливостями. Вагові категорії аналогічні класичному пауерліфтингу. Жим виконується зі спеціальної лави без ножного приводження.</p>
+            </div>
+            
+            <h3>Чоловіки</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Вагова категорія</th>
+                        <th>МСМК</th>
+                        <th>МС</th>
+                        <th>КМС</th>
+                        <th>I розряд</th>
+                        <th>II розряд</th>
+                        <th>III розряд</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>До 49 кг</td>
+                        <td class="msc">120 кг</td>
+                        <td class="msc">105 кг</td>
+                        <td class="kms">90 кг</td>
+                        <td class="i">80 кг</td>
+                        <td class="ii">70 кг</td>
+                        <td class="iii">60 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 54 кг</td>
+                        <td class="msc">135 кг</td>
+                        <td class="msc">120 кг</td>
+                        <td class="kms">105 кг</td>
+                        <td class="i">95 кг</td>
+                        <td class="ii">85 кг</td>
+                        <td class="iii">75 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 59 кг</td>
+                        <td class="msc">150 кг</td>
+                        <td class="msc">135 кг</td>
+                        <td class="kms">120 кг</td>
+                        <td class="i">110 кг</td>
+                        <td class="ii">100 кг</td>
+                        <td class="iii">90 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 65 кг</td>
+                        <td class="msc">165 кг</td>
+                        <td class="msc">150 кг</td>
+                        <td class="kms">135 кг</td>
+                        <td class="i">125 кг</td>
+                        <td class="ii">115 кг</td>
+                        <td class="iii">105 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 72 кг</td>
+                        <td class="msc">180 кг</td>
+                        <td class="msc">165 кг</td>
+                        <td class="kms">150 кг</td>
+                        <td class="i">140 кг</td>
+                        <td class="ii">130 кг</td>
+                        <td class="iii">120 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 80 кг</td>
+                        <td class="msc">195 кг</td>
+                        <td class="msc">180 кг</td>
+                        <td class="kms">165 кг</td>
+                        <td class="i">155 кг</td>
+                        <td class="ii">145 кг</td>
+                        <td class="iii">135 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 88 кг</td>
+                        <td class="msc">210 кг</td>
+                        <td class="msc">195 кг</td>
+                        <td class="kms">180 кг</td>
+                        <td class="i">170 кг</td>
+                        <td class="ii">160 кг</td>
+                        <td class="iii">150 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 97 кг</td>
+                        <td class="msc">225 кг</td>
+                        <td class="msc">210 кг</td>
+                        <td class="kms">195 кг</td>
+                        <td class="i">185 кг</td>
+                        <td class="ii">175 кг</td>
+                        <td class="iii">165 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 107 кг</td>
+                        <td class="msc">240 кг</td>
+                        <td class="msc">225 кг</td>
+                        <td class="kms">210 кг</td>
+                        <td class="i">200 кг</td>
+                        <td class="ii">190 кг</td>
+                        <td class="iii">180 кг</td>
+                    </tr>
+                    <tr>
+                        <td>Понад 107 кг</td>
+                        <td class="msc">255 кг</td>
+                        <td class="msc">240 кг</td>
+                        <td class="kms">225 кг</td>
+                        <td class="i">215 кг</td>
+                        <td class="ii">205 кг</td>
+                        <td class="iii">195 кг</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Жінки</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Вагова категорія</th>
+                        <th>МСМК</th>
+                        <th>МС</th>
+                        <th>КМС</th>
+                        <th>I розряд</th>
+                        <th>II розряд</th>
+                        <th>III розряд</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>До 41 кг</td>
+                        <td class="msc">70 кг</td>
+                        <td class="msc">60 кг</td>
+                        <td class="kms">50 кг</td>
+                        <td class="i">45 кг</td>
+                        <td class="ii">40 кг</td>
+                        <td class="iii">35 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 45 кг</td>
+                        <td class="msc">80 кг</td>
+                        <td class="msc">70 кг</td>
+                        <td class="kms">60 кг</td>
+                        <td class="i">55 кг</td>
+                        <td class="ii">50 кг</td>
+                        <td class="iii">45 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 50 кг</td>
+                        <td class="msc">90 кг</td>
+                        <td class="msc">80 кг</td>
+                        <td class="kms">70 кг</td>
+                        <td class="i">65 кг</td>
+                        <td class="ii">60 кг</td>
+                        <td class="iii">55 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 55 кг</td>
+                        <td class="msc">100 кг</td>
+                        <td class="msc">90 кг</td>
+                        <td class="kms">80 кг</td>
+                        <td class="i">75 кг</td>
+                        <td class="ii">70 кг</td>
+                        <td class="iii">65 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 61 кг</td>
+                        <td class="msc">110 кг</td>
+                        <td class="msc">100 кг</td>
+                        <td class="kms">90 кг</td>
+                        <td class="i">85 кг</td>
+                        <td class="ii">80 кг</td>
+                        <td class="iii">75 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 67 кг</td>
+                        <td class="msc">120 кг</td>
+                        <td class="msc">110 кг</td>
+                        <td class="kms">100 кг</td>
+                        <td class="i">95 кг</td>
+                        <td class="ii">90 кг</td>
+                        <td class="iii">85 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 73 кг</td>
+                        <td class="msc">130 кг</td>
+                        <td class="msc">120 кг</td>
+                        <td class="kms">110 кг</td>
+                        <td class="i">105 кг</td>
+                        <td class="ii">100 кг</td>
+                        <td class="iii">95 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 79 кг</td>
+                        <td class="msc">140 кг</td>
+                        <td class="msc">130 кг</td>
+                        <td class="kms">120 кг</td>
+                        <td class="i">115 кг</td>
+                        <td class="ii">110 кг</td>
+                        <td class="iii">105 кг</td>
+                    </tr>
+                    <tr>
+                        <td>До 86 кг</td>
+                        <td class="msc">150 кг</td>
+                        <td class="msc">140 кг</td>
+                        <td class="kms">130 кг</td>
+                        <td class="i">125 кг</td>
+                        <td class="ii">120 кг</td>
+                        <td class="iii">115 кг</td>
+                    </tr>
+                    <tr>
+                        <td>Понад 86 кг</td>
+                        <td class="msc">160 кг</td>
+                        <td class="msc">150 кг</td>
+                        <td class="kms">140 кг</td>
+                        <td class="i">135 кг</td>
+                        <td class="ii">130 кг</td>
+                        <td class="iii">125 кг</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight">
+                <p><strong>Примітки:</strong></p>
+                <ul>
+                    <li>МСМК - майстер спорту міжнародного класу</li>
+                    <li>МС - майстер спорту</li>
+                    <li>КМС - кандидат у майстри спорту</li>
+                    <li>Вагові категорії можуть незначно відрізнятись залежно від федерації</li>
+                    <li>Нормативи дійсні для спортсменів з обмеженими можливостями опорно-рухового апарату</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Паралімпійські нормативи | Довідник для тренерів та спортсменів</p>
+    </footer>
+     <script src="../script.js"></script>
+    
+</body>
+</html>
