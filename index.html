@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - Спортивні нормативи</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="paralax.css">
+    <style>
+        /* Глобальні стилі */
+        :root {
+            --primary-color: #2b6cb0;
+            --secondary-color: #1a365d;
+            --accent-color: #4299e1;
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #f7fafc;
+            overflow-x: hidden;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 100;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        /* Навігація */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            background-color: rgba(255,255,255,0.15);
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        nav a:active {
+            background-color: var(--secondary-color);
+            transform: scale(0.98);
+        }
+        
+        /* Основний контент */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Секція оновлень */
+        .updates-section {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+        }
+        
+        .updates-section h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+        
+        .updates-section ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .updates-section li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .updates-section li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232b6cb0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+            background-repeat: no-repeat;
+        }
+        
+        /* Підвал */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Адаптація */
+        @media (max-width: 992px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .hero-text, .hero-image {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            nav a {
+                width: 80%;
+                text-align: center;
+            }
+            
+            .updates-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Паралакс-секція -->
+    <div class="parallax-container">
+        <div class="parallax-layer layer-1" data-speed="0.05"></div>
+        <div class="parallax-layer layer-2" data-speed="0.2"></div>
+        <div class="parallax-layer layer-3" data-speed="0.4"></div>
+        <div class="parallax-content">
+            <h2 class="parallax-title">Спортивні досягнення</h2>
+            <p class="parallax-subtitle">Відкрийте для себе світ спортивних нормативів</p>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Контент -->
+    <header>
+        <h1>Спортивні нормативи</h1>
+        <nav>
+            <ul>
+                <li><a href="age.html">Вікові категорії</a></li>
+                <li><a href="standarts.html">Стандарти</a></li>
+                <li><a href="olimpic.html">Олімпійські види</a></li>
+                <li><a href="paraolimpic.html">Паралімпійські види</a></li>
+                <li><a href="calc.html">Калькулятор</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Ласкаво просимо на сайт спортивних нормативів!</h2>
+                <p>Тут ви знайдете актуальні нормативи для різних видів спорту та вікових категорій. Наша база даних постійно оновлюється згідно з останніми міжнародними стандартами.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Спортивні змагання" loading="lazy">
+            </div>
+        </section>
+        
+        <section class="updates-section">
+            <h3>Останні оновлення</h3>
+            <ul>
+                <li>Оновлені нормативи з легкої атлетики (2024) згідно з вимогами World Athletics</li>
+                <li>Додані нові вікові категорії для дітей та підлітків</li>
+                <li>Розширена база даних паралімпійських нормативів</li>
+                <li>Додано калькулятор індивідуальних тренувальних планів</li>
+                <li>Оновлений інтерфейс для кращої взаємодії</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Спортивні нормативи. Усі права захищені.</p>
+    </footer>
 
+    <script src="script.js" defer></script>
+</body>
+</html>
