@@ -1,1 +1,309 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стандарти нормативів</title>
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #2667cc;
+            --accent: #8338ec;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #06d6a0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.4s ease;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        
+        main:hover {
+            transform: translateY(-8px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent), var(--primary));
+            border-radius: 3px;
+        }
+        
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 35px 0 20px;
+            font-size: 1.5rem;
+        }
+        
+        ol {
+            list-style: none;
+            counter-reset: rank-counter;
+            padding-left: 0;
+        }
+        
+        ol li {
+            counter-increment: rank-counter;
+            padding: 18px 20px 18px 70px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        ol li:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        ol li::before {
+            content: counter(rank-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 8px rgba(58, 134, 255, 0.3);
+        }
+        
+        /* Спеціальні стилі для вищих розрядів */
+        ol li:nth-child(n+7)::before {
+            background: linear-gradient(135deg, var(--accent), #5e2ced);
+        }
+        
+        ol li:nth-child(n+7) {
+            background-color: rgba(131, 56, 236, 0.05);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 25px;
+            color: #666;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+        }
+        
+        /* Анімації */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        nav {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        main {
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        footer {
+            animation: fadeInUp 1.4s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            nav a {
+                width: 80%;
+                text-align: center;
+            }
+            
+            main {
+                padding: 25px;
+            }
+            
+            ol li {
+                padding: 15px 15px 15px 60px;
+            }
+            
+            ol li::before {
+                width: 35px;
+                height: 35px;
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Стандарти нормативів</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="olimpic.html">Олімпійські види</a></li>
+                <li><a href="paraolimpic.html">Паралімпійські види</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Загальні стандарти</h2>
+            <p>На цій сторінці представлені загальні вимоги до спортивних нормативів для всіх вікових категорій та рівнів підготовки.</p>
+            
+            <h3>Система оцінювання</h3>
+            <ol>
+                <li>III юнацький розряд</li>
+                <li>II юнацький розряд</li>
+                <li>I юнацький розряд</li>
+                <li>III дорослий розряд</li>
+                <li>II дорослий розряд</li>
+                <li>I дорослий розряд</li>
+                <li>Кандидат у майстри спорту</li>
+                <li>Майстер спорту</li>
+            </ol>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Спортивні нормативи України</p>
+    </footer>
+     <script src="script.js"></script>
+     
+</body>
+</html>
