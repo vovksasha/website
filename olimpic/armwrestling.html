@@ -1,1 +1,307 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Нормативи з армрестлінгу для різних рівнів підготовки">
+    <title>Армрестлінг</title>
+    <style>
+        :root {
+            --primary: #8B0000;
+            --secondary: #B22222;
+            --accent: #FFD700;
+            --light: #FFF8DC;
+            --dark: #2F4F4F;
+            --success: #228B22;
+            --danger: #DC143C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #FFEFBA, #FFFFFF);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(139, 0, 0, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: var(--primary);
+        }
+        
+        .pro-level {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .amateur-level {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .beginner-level {
+            color: var(--danger);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Армрестлінг</h1>
+        <nav>
+            <a href="../olimpic.html">← Назад до олімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Нормативи з армрестлінгу</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Норматив</th>
+                    <th>Професійний рівень</th>
+                    <th>Аматорський рівень</th>
+                    <th>Юніорський рівень (U-21)</th>
+                    <th>Юнацький рівень (U-18)</th>
+                    <th>Початковий рівень</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Час утримання позиції (чоловіки)</td>
+                    <td class="pro-level">60+ сек</td>
+                    <td class="amateur-level">40-50 сек</td>
+                    <td>30-40 сек</td>
+                    <td>20-30 сек</td>
+                    <td class="beginner-level">до 20 сек</td>
+                </tr>
+                <tr>
+                    <td>Час утримання позиції (жінки)</td>
+                    <td class="pro-level">45+ сек</td>
+                    <td class="amateur-level">30-40 сек</td>
+                    <td>20-30 сек</td>
+                    <td>15-20 сек</td>
+                    <td class="beginner-level">до 15 сек</td>
+                </tr>
+                <tr>
+                    <td>Максимальне навантаження (чоловіки)</td>
+                    <td class="pro-level">70+ кг</td>
+                    <td class="amateur-level">50-60 кг</td>
+                    <td>40-50 кг</td>
+                    <td>30-40 кг</td>
+                    <td class="beginner-level">до 30 кг</td>
+                </tr>
+                <tr>
+                    <td>Максимальне навантаження (жінки)</td>
+                    <td class="pro-level">50+ кг</td>
+                    <td class="amateur-level">35-45 кг</td>
+                    <td>25-35 кг</td>
+                    <td>20-25 кг</td>
+                    <td class="beginner-level">до 20 кг</td>
+                </tr>
+                <tr>
+                    <td>Кількість перемог у спарингах (за 5 хв)</td>
+                    <td class="pro-level">15+</td>
+                    <td class="amateur-level">10-15</td>
+                    <td>7-10</td>
+                    <td>5-7</td>
+                    <td class="beginner-level">до 5</td>
+                </tr>
+                <tr>
+                    <td>Сила хвату (кг)</td>
+                    <td class="pro-level">80+</td>
+                    <td class="amateur-level">60-80</td>
+                    <td>50-60</td>
+                    <td>40-50</td>
+                    <td class="beginner-level">до 40</td>
+                </tr>
+                <tr>
+                    <td>Витривалість (повторень за 1 хв)</td>
+                    <td class="pro-level">30+</td>
+                    <td class="amateur-level">20-30</td>
+                    <td>15-20</td>
+                    <td>10-15</td>
+                    <td class="beginner-level">до 10</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Техніка армрестлінгу</h2>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li style="margin-bottom: 10px;">Правильне положення тіла - плечі паралельно столу</li>
+            <li style="margin-bottom: 10px;">Хват повинен бути міцним без надмірного напруження</li>
+            <li style="margin-bottom: 10px;">Лікоть повинен щільно прилягати до стола</li>
+            <li style="margin-bottom: 10px;">Друга рука тримається за ручку стола</li>
+            <li>Уникайте різких рухів для запобігання травмам</li>
+        </ul>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Нормативи з армрестлінгу | Довідник для тренерів та спортсменів</p>
+    </footer>
+   <script src="../script.js"></script>
+ 
+</body>
+</html>
