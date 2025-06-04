@@ -1,1 +1,292 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Пауерліфтинг</title>
+    <style>
+        :root {
+            --primary: #8e2de2;
+            --secondary: #4a00e0;
+            --accent: #f12711;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #1fa2ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #fdfbfb, #ebedee);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(142, 45, 226, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(241, 39, 17, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: var(--primary);
+        }
+        
+        .elite {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .pro {
+            color: #1fa2ff;
+            font-weight: 600;
+        }
+        
+        .amateur {
+            color: #4CAF50;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Пауерліфтинг</h1>
+        <nav>
+            <a href="../olimpic.html">← Назад до олімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Нормативи з пауерліфтингу</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Вправа</th>
+                    <th>Елітний рівень</th>
+                    <th>Професійний рівень</th>
+                    <th>Аматорський рівень</th>
+                    <th>Юніорський рівень (U-23)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Жим лежачи (чоловіки)</td>
+                    <td class="elite">180+ кг</td>
+                    <td class="pro">140-179 кг</td>
+                    <td class="amateur">100-139 кг</td>
+                    <td>120-150 кг</td>
+                </tr>
+                <tr>
+                    <td>Жим лежачи (жінки)</td>
+                    <td class="elite">120+ кг</td>
+                    <td class="pro">90-119 кг</td>
+                    <td class="amateur">60-89 кг</td>
+                    <td>70-95 кг</td>
+                </tr>
+                <tr>
+                    <td>Присідання (чоловіки)</td>
+                    <td class="elite">250+ кг</td>
+                    <td class="pro">200-249 кг</td>
+                    <td class="amateur">120-199 кг</td>
+                    <td>150-210 кг</td>
+                </tr>
+                <tr>
+                    <td>Присідання (жінки)</td>
+                    <td class="elite">180+ кг</td>
+                    <td class="pro">140-179 кг</td>
+                    <td class="amateur">80-139 кг</td>
+                    <td>100-150 кг</td>
+                </tr>
+                <tr>
+                    <td>Станова тяга (чоловіки)</td>
+                    <td class="elite">300+ кг</td>
+                    <td class="pro">240-299 кг</td>
+                    <td class="amateur">140-239 кг</td>
+                    <td>180-250 кг</td>
+                </tr>
+                <tr>
+                    <td>Станова тяга (жінки)</td>
+                    <td class="elite">200+ кг</td>
+                    <td class="pro">160-199 кг</td>
+                    <td class="amateur">90-159 кг</td>
+                    <td>110-170 кг</td>
+                </tr>
+                <tr>
+                    <td>Сума троєборства (чоловіки)</td>
+                    <td class="elite">700+ кг</td>
+                    <td class="pro">550-699 кг</td>
+                    <td class="amateur">350-549 кг</td>
+                    <td>450-600 кг</td>
+                </tr>
+                <tr>
+                    <td>Сума троєборства (жінки)</td>
+                    <td class="elite">450+ кг</td>
+                    <td class="pro">350-449 кг</td>
+                    <td class="amateur">200-349 кг</td>
+                    <td>250-400 кг</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Нормативи з пауерліфтингу | Вікові та гендерні категорії</p>
+    </footer>
+      <script src="../script.js"></script>
+     
+</body>
+</html>
