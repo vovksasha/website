@@ -1,1 +1,319 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Легка атлетика</title>
+    <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #ff7e5f;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4CAF50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #f5f7fa, #e4e8f0);
+            color: var(--dark);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        main {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(30, 60, 114, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 126, 95, 0.1);
+            transform: scale(1.01);
+            transition: all 0.2s ease;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: var(--primary);
+        }
+        
+        .elite {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .pro {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .amateur {
+            color: var(--secondary);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        header {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        main {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Легка атлетика</h1>
+        <nav>
+            <a href="../olimpic.html">← Назад до олімпійських видів</a>
+            <a href="../index.html">На головну</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Нормативи з легкої атлетики</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дисципліна</th>
+                    <th>Елітний рівень (чол)</th>
+                    <th>Елітний рівень (жін)</th>
+                    <th>Професійний рівень (чол)</th>
+                    <th>Професійний рівень (жін)</th>
+                    <th>Аматорський рівень (чол)</th>
+                    <th>Аматорський рівень (жін)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Біг 100м</td>
+                    <td class="elite">9.90 сек</td>
+                    <td class="elite">10.90 сек</td>
+                    <td class="pro">11.50 сек</td>
+                    <td class="pro">12.50 сек</td>
+                    <td class="amateur">13.50 сек</td>
+                    <td class="amateur">15.00 сек</td>
+                </tr>
+                <tr>
+                    <td>Біг 400м</td>
+                    <td class="elite">45.00 сек</td>
+                    <td class="elite">50.00 сек</td>
+                    <td class="pro">50.00 сек</td>
+                    <td class="pro">55.00 сек</td>
+                    <td class="amateur">60.00 сек</td>
+                    <td class="amateur">65.00 сек</td>
+                </tr>
+                <tr>
+                    <td>Біг 1500м</td>
+                    <td class="elite">3:35 хв</td>
+                    <td class="elite">4:00 хв</td>
+                    <td class="pro">3:50 хв</td>
+                    <td class="pro">4:15 хв</td>
+                    <td class="amateur">4:30 хв</td>
+                    <td class="amateur">5:00 хв</td>
+                </tr>
+                <tr>
+                    <td>Стрибок у довжину</td>
+                    <td class="elite">8.00 м</td>
+                    <td class="elite">7.00 м</td>
+                    <td class="pro">7.00 м</td>
+                    <td class="pro">6.00 м</td>
+                    <td class="amateur">5.80 м</td>
+                    <td class="amateur">4.50 м</td>
+                </tr>
+                <tr>
+                    <td>Стрибок у висоту</td>
+                    <td class="elite">2.30 м</td>
+                    <td class="elite">2.00 м</td>
+                    <td class="pro">2.10 м</td>
+                    <td class="pro">1.85 м</td>
+                    <td class="amateur">1.80 м</td>
+                    <td class="amateur">1.60 м</td>
+                </tr>
+                <tr>
+                    <td>Метання ядра</td>
+                    <td class="elite">21.00 м</td>
+                    <td class="elite">18.50 м</td>
+                    <td class="pro">16.00 м</td>
+                    <td class="pro">14.00 м</td>
+                    <td class="amateur">12.00 м</td>
+                    <td class="amateur">8.50 м</td>
+                </tr>
+                <tr>
+                    <td>Метання списа</td>
+                    <td class="elite">85.00 м</td>
+                    <td class="elite">65.00 м</td>
+                    <td class="pro">70.00 м</td>
+                    <td class="pro">55.00 м</td>
+                    <td class="amateur">50.00 м</td>
+                    <td class="amateur">40.00 м</td>
+                </tr>
+                <tr>
+                    <td>Потрійний стрибок</td>
+                    <td class="elite">17.50 м</td>
+                    <td class="elite">15.00 м</td>
+                    <td class="pro">15.00 м</td>
+                    <td class="pro">13.00 м</td>
+                    <td class="amateur">12.00 м</td>
+                    <td class="amateur">10.00 м</td>
+                </tr>
+                <tr>
+                    <td>Біг з бар'єрами 110м/100м</td>
+                    <td class="elite">13.20 сек</td>
+                    <td class="elite">12.80 сек</td>
+                    <td class="pro">14.50 сек</td>
+                    <td class="pro">14.00 сек</td>
+                    <td class="amateur">16.50 сек</td>
+                    <td class="amateur">16.00 сек</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Нормативи з легкої атлетики | Всі дисципліни</p>
+    </footer>
+     <script src="../script.js"></script>
+  
+</body>
+</html>
